@@ -13,3 +13,12 @@ func TestGetFile(t *testing.T) {
 		t.Errorf("GetFile() error data must have a value")
 	}
 }
+
+func TestCreateFile(t *testing.T) {
+	data := []byte("milwad")
+
+	err := CreateFile("testdata/new-text.txt", data)
+	if err != nil {
+		t.Errorf("CreateFile() error = %v", err)
+	}
+}
