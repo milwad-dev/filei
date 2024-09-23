@@ -52,3 +52,5 @@ coverage
 
 # Temporary
 testdata/new-text.txt
+testdata/upload.txt
+testdata/delete-text.txt

@@ -1,6 +1,25 @@
 package filei
 
-import "testing"
+import (
+	"os"
+	"testing"
+)
+
+func TestUploadFile(t *testing.T) {
+	file, _ := os.Create("testdata/new-text.txt")
+
+	err := UploadFile(file, "testdata/upload.txt")
+	if err != nil {
+		t.Errorf("UploadFile() error = %v", err)
+	}
+
+	var fakeFile *os.File
+
+	err = UploadFile(fakeFile, "testdata/upload.txt")
+	if err == nil {
+		t.Errorf("UploadFile() error data must have a value")
+	}
+}
 
 func TestGetFile(t *testing.T) {
 	_, err := GetFile("testdata/text.txt")
@@ -15,7 +34,7 @@ func TestGetFile(t *testing.T) {
 }
 
 func TestDeleteFile(t *testing.T) {
-	err := DeleteFile("testdata/new-text.txt")
+	err := DeleteFile("testdata/delete-text.txt")
 	if err != nil {
 		t.Errorf("DeleteFile() error = %v", err)
 	}
@@ -24,6 +43,8 @@ func TestDeleteFile(t *testing.T) {
 	if err == nil {
 		t.Errorf("DeleteFile() error data must have a value")
 	}
+
+	os.Create("testdata/delete-text.txt")
 }
 
 func TestCreateFile(t *testing.T) {
