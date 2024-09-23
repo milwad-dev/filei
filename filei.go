@@ -30,3 +30,12 @@ func GetFile(fileName string) (multipart.File, error) {
 	}
 	return file, nil
 }
+
+// DeleteFile removes a file from the specified path.
+func DeleteFile(fileName string) error {
+	err := os.Remove(fileName)
+	if err != nil {
+		return err
+	}
+	return nil
+}
