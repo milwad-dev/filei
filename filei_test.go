@@ -14,6 +14,18 @@ func TestGetFile(t *testing.T) {
 	}
 }
 
+func TestDeleteFile(t *testing.T) {
+	err := DeleteFile("testdata/new-text.txt")
+	if err != nil {
+		t.Errorf("DeleteFile() error = %v", err)
+	}
+
+	err = DeleteFile("wrong path")
+	if err == nil {
+		t.Errorf("DeleteFile() error data must have a value")
+	}
+}
+
 func TestCreateFile(t *testing.T) {
 	data := []byte("milwad")
 
