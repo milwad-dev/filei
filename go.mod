@@ -1,3 +1,3 @@
-module github.com/milwad-dev/go-file
+module github.com/milwad-dev/filei
 
-go 1.22.1
+go 1.18
