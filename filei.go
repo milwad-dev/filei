@@ -39,3 +39,20 @@ func DeleteFile(fileName string) error {
 	}
 	return nil
 }
+
+// CreateFile create a new file from the specified path and data.
+func CreateFile(filaName string, data []byte) error {
+	file, err := os.Create(filaName)
+	if err != nil {
+		return err
+	}
+
+	defer file.Close()
+
+	_, err = file.Write(data)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
