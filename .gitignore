@@ -47,4 +47,8 @@ test-results/
 # Temporary files
 tmp/
 
+# Coverage tests
 coverage
+
+# Temporary
+testdata/new-text.txt
