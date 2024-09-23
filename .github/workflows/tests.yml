@@ -33,5 +33,4 @@ jobs:
           path: ${{ env.GOPATH }}/src/github.com/${{ github.repository }}
       - name: Test
         run: |
-          go get -d -t ./...
-          make test
+          go test
