@@ -89,3 +89,14 @@ func TestCleanDirectory(t *testing.T) {
 		t.Fatal("CleanDirectory() error data must have 0 files")
 	}
 }
+func TestDeleteDirectory(t *testing.T) {
+	directory := "testdata/dir2"
+
+	defer os.Mkdir(directory, 0755)
+
+	err := DeleteDirectory(directory)
+
+	if err != nil {
+		t.Fatalf("DeleteDirectory() error = %v", err)
+	}
+}
