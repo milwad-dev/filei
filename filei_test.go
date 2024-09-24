@@ -55,3 +55,16 @@ func TestCreateFile(t *testing.T) {
 		t.Errorf("CreateFile() error = %v", err)
 	}
 }
+
+func TestExistsFile(t *testing.T) {
+	isExists := Exists("testdata/text.txt") // Must be true
+
+	if isExists != true {
+		t.Error("Exists() error data must be true")
+	}
+
+	isNotExists := Exists("wrong path") // Must be false
+	if isNotExists != false {
+		t.Error("Exists() error data must be false")
+	}
+}
