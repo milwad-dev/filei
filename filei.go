@@ -56,3 +56,14 @@ func CreateFile(filaName string, data []byte) error {
 
 	return nil
 }
+
+// Exists ensure that the file exists.
+func Exists(fileName string) bool {
+	_, err := os.Stat(fileName)
+
+	if os.IsNotExist(err) {
+		return false
+	}
+
+	return true
+}
