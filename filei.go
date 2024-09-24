@@ -67,3 +67,17 @@ func Exists(fileName string) bool {
 
 	return true
 }
+
+// CleanDirectory clear the directory.
+func CleanDirectory(directory string) bool {
+	data, _ := os.ReadDir(directory)
+
+	for _, file := range data {
+		err := os.Remove(directory + "/" + file.Name())
+		if err != nil {
+			continue
+		}
+	}
+
+	return true
+}
