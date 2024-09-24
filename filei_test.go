@@ -68,3 +68,24 @@ func TestExistsFile(t *testing.T) {
 		t.Error("Exists() error data must be false")
 	}
 }
+
+func TestCleanDirectory(t *testing.T) {
+	directory := "testdata/dir"
+
+	defer os.Create(directory + "/data.txt")
+	defer os.Create(directory + "/item.txt")
+
+	dirData, _ := os.ReadDir(directory)
+
+	if len(dirData) != 2 {
+		t.Fatal("CleanDirectory() error data must have 2 files")
+	}
+
+	CleanDirectory(directory)
+
+	dirData, _ = os.ReadDir(directory)
+
+	if len(dirData) == 2 {
+		t.Fatal("CleanDirectory() error data must have 0 files")
+	}
+}
