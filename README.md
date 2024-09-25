@@ -36,6 +36,7 @@ go get -u github.com/milwad-dev/filei
 - [Size](#size)
 - [Chmod](#chmod)
 - [Prepend](#prepend)
+- [Append](#append)
 
 <a name="upload-file"></a>
 ### UploadFile
@@ -159,6 +160,15 @@ If you want to write to the beginning of a file, you can use `Prepend` function:
 
 ```go
 err := Prepend(filePath, data)
+```
+
+<a name="append"></a>
+# Append
+
+If you want to write to the end of a file, you can use `Append` function:
+
+```go
+err := Append(filePath, data)
 ```
 
 ## License
