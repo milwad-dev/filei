@@ -34,3 +34,17 @@ go get -u github.com/milwad-dev/filei
 - [Files](#files)
 - [Size](#size)
 - [Chmod](#chmod)
+
+<a name="upload-file"></a>
+### UploadFile
+
+If you want to upload a file to a path you can use `UploadFile` function:
+
+```go
+file, _ := os.Create("testdata/new-text.txt")
+
+err := UploadFile(file, "testdata/upload.txt")
+if err != nil {
+    // ...
+}
+```
