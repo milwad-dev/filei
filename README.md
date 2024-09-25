@@ -20,3 +20,17 @@ For install the `FileI` on your project, you can run below command on terminal:
 ```shell
 go get -u github.com/milwad-dev/filei
 ```
+
+## Usage
+
+- [UploadFile](#upload-file)
+- [GetFile](#get-file)
+- [DeleteFile](#delete-file)
+- [CreateFile](#create-file)
+- [Exists](#exists)
+- [CleanDirectory](#clean-directory)
+- [DeleteDirectory](#delete-directory)
+- [MoveFile](#move-file)
+- [Files](#files)
+- [Size](#size)
+- [Chmod](#chmod)
