@@ -134,3 +134,16 @@ func TestFiles(t *testing.T) {
 		t.Fatal("Files() error data must have 7 files")
 	}
 }
+
+func TestSize(t *testing.T) {
+	filePath := "testdata/text.txt"
+
+	size, err := Size(filePath)
+	if err != nil {
+		t.Fatalf("Size() error = %v", err)
+	}
+
+	if size != 13 {
+		t.Fatal("Size() error data must have 13 files")
+	}
+}
