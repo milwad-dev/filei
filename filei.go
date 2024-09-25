@@ -140,3 +140,13 @@ func Size(filePath string) (int64, error) {
 
 	return data.Size(), nil
 }
+
+// Chmod give permission to a file.
+func Chmod(filePath string, mode os.FileMode) error {
+	err := os.Chmod(filePath, mode)
+	if err != nil {
+		return fmt.Errorf("couldn't chmod file: %v", err)
+	}
+
+	return nil
+}
