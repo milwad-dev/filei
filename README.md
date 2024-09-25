@@ -3,6 +3,7 @@
 The `FileI` is a lightweight and easy-to-use package for handling file operations in Go (Golang). It simplifies common file-related tasks such as uploading, deleting, and managing files, allowing developers to handle file I/O operations with minimal effort. Whether you're building an API, managing assets, or simply need a streamlined way to work with files in Go, FileI provides intuitive methods that integrate seamlessly into your project.
 
 [![GoDoc Widget](https://godoc.org/github.com/milwad-devi/filei?status.svg)](https://pkg.go.dev/github.com/milwad-dev/filei)
+[![Passed Tests](https://github.com/milwad-dev/filei/actions/workflows/tests.yml/badge.svg)](https://github.com/milwad-dev/filei/actions/workflows/tests.yml)
 
 Key Features:
 
