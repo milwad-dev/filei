@@ -105,4 +105,12 @@ If you want to clean a directory (remove all files in a directory), you can use 
 CleanDirectory("directory path") // Bool
 ```
 
+<a name="delete-directory"></a>
+### DeleteDirectory
+
+If you want to delete a directory, you can use `DeleteDirectory` function:
+
+```go
+err := DeleteDirectory(directory)
+```
 
