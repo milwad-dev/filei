@@ -165,3 +165,10 @@ This project exists thanks to all the people who contribute. [CONTRIBUTING](http
 
 If you've found a bug regarding security please mail [milwad.dev@gmail.com](mailto:milwad.dev@gmail.com) instead of using the issue tracker.
 
+
+## Donate
+
+If this package is helpful for you, you can buy a coffee for me :) ❤️
+
+Iranian Gateway: https://daramet.com/milwad_khosravi
+Paypal Gateway: SOON
