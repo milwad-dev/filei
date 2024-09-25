@@ -86,3 +86,12 @@ if err != nil {
     // ...
 }
 ```
+
+<a name="exists"></a>
+### Exists
+
+If you want to ensure that a file exists, you can use `Exists` function:
+
+```go
+isExists := Exists("file path") // Bool
+```
