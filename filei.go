@@ -23,7 +23,7 @@ func UploadFile(file multipart.File, fileName string) error {
 	return nil
 }
 
-// GetFile retrieves a file from the specified path.
+// GetFile retrieve a file from the specified path.
 func GetFile(fileName string) (multipart.File, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
