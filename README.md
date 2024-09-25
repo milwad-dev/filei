@@ -114,3 +114,11 @@ If you want to delete a directory, you can use `DeleteDirectory` function:
 err := DeleteDirectory(directory)
 ```
 
+<a name="move-directory"></a>
+### MoveDirectory
+
+If you want to move a directory to another path, you can use `MoveDirectory` function:
+
+```go
+err := MoveFile(sourcePath, destPath)
+```
