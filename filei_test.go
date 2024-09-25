@@ -130,8 +130,8 @@ func TestFiles(t *testing.T) {
 		t.Fatalf("Files() error = %v", err)
 	}
 
-	if len(data) != 7 {
-		t.Fatal("Files() error data must have 7 files")
+	if len(data) != 8 {
+		t.Fatal("Files() error data must have 8 files")
 	}
 }
 
@@ -159,5 +159,19 @@ func TestChmod(t *testing.T) {
 	err = Chmod("wrong path", 0700)
 	if err == nil {
 		t.Errorf("Chmod() error data must have a value")
+	}
+}
+
+func TestPrepend(t *testing.T) {
+	filePath := "testdata/pre-app.txt"
+
+	err := Prepend(filePath, "The first line\n")
+	if err != nil {
+		t.Errorf("Prepend() error = %v", err)
+	}
+
+	err = Prepend("wrong path", "The first line\n")
+	if err == nil {
+		t.Errorf("Prepend() error data must have a value")
 	}
 }
