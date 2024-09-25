@@ -175,3 +175,17 @@ func TestPrepend(t *testing.T) {
 		t.Errorf("Prepend() error data must have a value")
 	}
 }
+
+func TestAppend(t *testing.T) {
+	filePath := "testdata/pre-app.txt"
+
+	err := Append(filePath, "The last line\n")
+	if err != nil {
+		t.Errorf("Append() error = %v", err)
+	}
+
+	err = Append("wrong path", "The last line\n")
+	if err == nil {
+		t.Errorf("Append() error data must have a value")
+	}
+}
