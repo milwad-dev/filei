@@ -120,3 +120,13 @@ func MoveFile(sourcePath, destPath string) error {
 	}
 	return nil
 }
+
+// Files get the list of files of a directory.
+func Files(directory string) ([]os.DirEntry, error) {
+	data, err := os.ReadDir(directory)
+	if err != nil {
+		return nil, fmt.Errorf("couldn't read directory: %v", err)
+	}
+
+	return data, nil
+}
