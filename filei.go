@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"mime/multipart"
 	"os"
+	"strings"
 )
 
 // UploadFile saves an uploaded file to the specified path.
@@ -165,6 +166,36 @@ func Prepend(filePath string, data string) error {
 
 	// Write the new content back to the file
 	err = ioutil.WriteFile(filePath, newContent, 0644)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+// Append write to the end of a file.
+func Append(filePath string, data string) error {
+	// Read the existing content of the file
+	content, err := ioutil.ReadFile(filePath)
+	if err != nil {
+		return err
+	}
+
+	// Convert content to string for easier manipulation
+	contentStr := string(content)
+
+	// Split content by lines to get the last line
+	lines := strings.Split(contentStr, "\n")
+	if len(lines) > 0 {
+		// Append data to the last line
+		lines[len(lines)-1] += data
+	}
+
+	// Join lines back into a single string
+	newContent := strings.Join(lines, "\n")
+
+	// Write the new content back to the file
+	err = ioutil.WriteFile(filePath, []byte(newContent), 0644)
 	if err != nil {
 		return err
 	}
