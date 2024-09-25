@@ -155,7 +155,13 @@ err := Chmod(filePath, 0700)
 
 * This package is created and modified by <a href="https://github.com/milwad-dev" target="_blank">Milwad Khosravi</a> for Laravel upper more than 9 and has been released under the MIT License.
 
-# Contributing
+## Contributing
 
 This project exists thanks to all the people who contribute. [CONTRIBUTING](https://github.com/milwad-dev/filei/graphs/contributors)
+
+<a href="https://github.com/milwad-dev/filei/graphs/contributors"><img src="https://opencollective.com/filei/contributors.svg?width=890&button=false" /></a>
+
+## Security
+
+If you've found a bug regarding security please mail [milwad.dev@gmail.com](mailto:milwad.dev@gmail.com) instead of using the issue tracker.
 
