@@ -95,3 +95,14 @@ If you want to ensure that a file exists, you can use `Exists` function:
 ```go
 isExists := Exists("file path") // Bool
 ```
+
+<a name="clean-directory"></a>
+### CleanDirectory
+
+If you want to clean a directory (remove all files in a directory), you can use `CleanDirectory` function:
+
+```go
+CleanDirectory("directory path") // Bool
+```
+
+
