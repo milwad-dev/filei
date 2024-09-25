@@ -141,4 +141,11 @@ If you want to get a size of a file, you can use `Size` function:
 size, err := Size(filePath)
 ```
 
+<a name="chmod"></a>
+### Chmod
 
+If you want to give permission to a file, you can use `Chmod` function:
+
+```go
+err := Chmod(filePath, 0700)
+```
