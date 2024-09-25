@@ -122,3 +122,13 @@ If you want to move a directory to another path, you can use `MoveDirectory` fun
 ```go
 err := MoveFile(sourcePath, destPath)
 ```
+
+<a name="files"></a>
+### Files
+
+If you want to get all files of a directory, you can use `Files` function:
+
+```go
+files, err := Files(directory)
+```
+
