@@ -121,3 +121,16 @@ func TestMoveFile(t *testing.T) {
 		t.Fatalf("MoveFile() error data must have a value")
 	}
 }
+
+func TestFiles(t *testing.T) {
+	directory := "testdata"
+
+	data, err := Files(directory)
+	if err != nil {
+		t.Fatalf("Files() error = %v", err)
+	}
+
+	if len(data) != 7 {
+		t.Fatal("Files() error data must have 7 files")
+	}
+}
