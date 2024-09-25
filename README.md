@@ -61,3 +61,17 @@ if err != nil {
 }
 ```
 
+<a name="delete-file"></a>
+### DeleteFile
+
+If you want to delete a file, you can use `DeleteFile` function:
+
+```go
+err := DeleteFile("file path")
+if err != nil {
+    // ...
+}
+```
+
+
+
