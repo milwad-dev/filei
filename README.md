@@ -150,3 +150,8 @@ If you want to give permission to a file, you can use `Chmod` function:
 ```go
 err := Chmod(filePath, 0700)
 ```
+
+## License
+
+* This package is created and modified by <a href="https://github.com/milwad-dev" target="_blank">Milwad Khosravi</a> for Laravel upper more than 9 and has been released under the MIT License.
+
