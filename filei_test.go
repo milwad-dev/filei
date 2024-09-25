@@ -89,6 +89,7 @@ func TestCleanDirectory(t *testing.T) {
 		t.Fatal("CleanDirectory() error data must have 0 files")
 	}
 }
+
 func TestDeleteDirectory(t *testing.T) {
 	directory := "testdata/dir2"
 
@@ -98,5 +99,25 @@ func TestDeleteDirectory(t *testing.T) {
 
 	if err != nil {
 		t.Fatalf("DeleteDirectory() error = %v", err)
+	}
+}
+
+func TestMoveFile(t *testing.T) {
+	sourcePath := "testdata/move-text.txt"
+	destPath := "testdata/move2-text.txt"
+
+	func() {
+		err := MoveFile(sourcePath, destPath)
+		if err != nil {
+			t.Fatalf("MoveFile() error = %v", err)
+		}
+	}()
+
+	defer MoveFile(destPath, sourcePath)
+
+	// Wrong path
+	err := MoveFile("wrong path", "wrong path")
+	if err == nil {
+		t.Fatalf("MoveFile() error data must have a value")
 	}
 }

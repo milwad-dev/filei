@@ -85,7 +85,7 @@ func CleanDirectory(directory string) bool {
 
 // DeleteDirectory delete the directory.
 func DeleteDirectory(directory string) error {
-	err := os.Remove(directory)
+	err := os.RemoveAll(directory)
 	if err != nil {
 		return err
 	}
