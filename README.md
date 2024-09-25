@@ -73,5 +73,16 @@ if err != nil {
 }
 ```
 
+<a name="create-file"></a>
+### CreateFile
 
+If you want to create a file with specific extension and contains a data, you can use `CreateFile` function:
 
+```go
+data := []byte("milwad")
+
+err := CreateFile("file path", data)
+if err != nil {
+    // ...
+}
+```
