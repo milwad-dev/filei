@@ -147,3 +147,17 @@ func TestSize(t *testing.T) {
 		t.Fatal("Size() error data must have 13 files")
 	}
 }
+
+func TestChmod(t *testing.T) {
+	filePath := "testdata/text.txt"
+
+	err := Chmod(filePath, 0700)
+	if err != nil {
+		t.Errorf("Chmod() error = %v", err)
+	}
+
+	err = Chmod("wrong path", 0700)
+	if err == nil {
+		t.Errorf("Chmod() error data must have a value")
+	}
+}
