@@ -3,6 +3,7 @@ package filei
 import (
 	"fmt"
 	"io"
+	"io/ioutil"
 	"mime/multipart"
 	"os"
 )
@@ -146,6 +147,26 @@ func Chmod(filePath string, mode os.FileMode) error {
 	err := os.Chmod(filePath, mode)
 	if err != nil {
 		return fmt.Errorf("couldn't chmod file: %v", err)
+	}
+
+	return nil
+}
+
+// Prepend write to the beginning of a file.
+func Prepend(filePath string, data string) error {
+	// Read the existing content of the file
+	content, err := ioutil.ReadFile(filePath)
+	if err != nil {
+		return err
+	}
+
+	// Combine new data with the existing content
+	newContent := []byte(data + string(content))
+
+	// Write the new content back to the file
+	err = ioutil.WriteFile(filePath, newContent, 0644)
+	if err != nil {
+		return err
 	}
 
 	return nil
