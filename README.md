@@ -35,6 +35,7 @@ go get -u github.com/milwad-dev/filei
 - [Files](#files)
 - [Size](#size)
 - [Chmod](#chmod)
+- [Prepend](#prepend)
 
 <a name="upload-file"></a>
 ### UploadFile
@@ -149,6 +150,15 @@ If you want to give permission to a file, you can use `Chmod` function:
 
 ```go
 err := Chmod(filePath, 0700)
+```
+
+<a name="prepend"></a>
+### Prepend
+
+If you want to write to the beginning of a file, you can use `Prepend` function:
+
+```go
+err := Prepend(filePath, data)
 ```
 
 ## License
