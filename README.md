@@ -10,3 +10,11 @@ Key Features:
 - Cross-platform Support: Works across different operating systems.
 
 Perfect for developers who need to manage file operations quickly and efficiently in their Go projects.
+
+## Installation
+
+For install the `FileI` on your project, you can run below command on terminal:
+
+```shell
+go get -u github.com/milwad-dev/filei
+```
