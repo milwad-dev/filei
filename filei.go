@@ -122,11 +122,21 @@ func MoveFile(sourcePath, destPath string) error {
 }
 
 // Files get the list of files of a directory.
-func Files(directory string) ([]os.DirEntry, error) {
-	data, err := os.ReadDir(directory)
+func Files(directoryPath string) ([]os.DirEntry, error) {
+	data, err := os.ReadDir(directoryPath)
 	if err != nil {
 		return nil, fmt.Errorf("couldn't read directory: %v", err)
 	}
 
 	return data, nil
+}
+
+// Size get the size of a file.
+func Size(filePath string) (int64, error) {
+	data, err := os.Stat(filePath)
+	if err != nil {
+		return -1, fmt.Errorf("couldn't stat file: %v", err)
+	}
+
+	return data.Size(), nil
 }
