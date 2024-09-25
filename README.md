@@ -132,3 +132,13 @@ If you want to get all files of a directory, you can use `Files` function:
 files, err := Files(directory)
 ```
 
+<a name="size"></a>
+### Size
+
+If you want to get a size of a file, you can use `Size` function:
+
+```go
+size, err := Size(filePath)
+```
+
+
