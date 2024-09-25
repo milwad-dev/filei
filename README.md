@@ -43,8 +43,21 @@ If you want to upload a file to a path you can use `UploadFile` function:
 ```go
 file, _ := os.Create("testdata/new-text.txt")
 
-err := UploadFile(file, "testdata/upload.txt")
+err := UploadFile(file, "destPath")
 if err != nil {
     // ...
 }
 ```
+
+<a name="get-file"></a>
+### GetFile
+
+If you want to retrieve a file from the specified path, you can use `GetFile` function:
+
+```go
+file, err := GetFile("file path")
+if err != nil {
+	// ...
+}
+```
+
